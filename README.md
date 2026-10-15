@@ -304,3 +304,4 @@ All 35+ automated assertions will run and report:
    - Clients cannot be trusted. If the frontend calculated the price, an attacker could manipulate `totalAmount: 1`. The server owns the business and pricing rules, re-validates current product prices and stock, and creates the order in paise.
 7. **What is the purpose of Razorpay HMAC SHA-256 signature verification?**
    - The signature is calculated as `HMAC_SHA256(razorpay_order_id + "|" + razorpay_payment_id, RAZORPAY_KEY_SECRET)`. Because only the backend and Razorpay have the Key Secret, verifying this signature mathematically guarantees the payment was authentically processed and not forged by a rogue client.
+# ShopKart
